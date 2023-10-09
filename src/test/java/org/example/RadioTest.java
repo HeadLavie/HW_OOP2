@@ -71,7 +71,7 @@ public class RadioTest {
     }
 
     @Test
-    public void ShouldSetStationNegative() {
+    public void ShouldSetStationAboveMax() {
         Radio radio = new Radio();
 
         radio.setCurrentStation(5);
@@ -79,6 +79,20 @@ public class RadioTest {
 
         int expected = 5;
         int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void ShouldSetStationBelowMin() {
+
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(5);
+        radio.setCurrentStation(-1);
+
+        int expected = 5;
+        int actual = radio.currentStation;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -136,4 +150,5 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
 }
