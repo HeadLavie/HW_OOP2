@@ -4,9 +4,23 @@ public class Radio {
 
     private int currentVolume;
     private int currentStation;
+    private int numberOfStations = 10;
+
+public Radio(int numberOfStations) {
+
+    this.numberOfStations = numberOfStations;
+}
+
+    public Radio() {
+
+    }
 
     public int getCurrentVolume() {
         return currentVolume;
+    }
+
+    public int numberOfStations() {
+        return numberOfStations;
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
