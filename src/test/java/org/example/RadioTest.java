@@ -151,10 +151,10 @@ public class RadioTest {
     public void ShouldChangeNextStationMax() {
         Radio radio = new Radio();
 
-        radio.setCurrentStation(8);
+        radio.setCurrentStation(9);
         radio.nextStation();
 
-        int expected = 9;
+        int expected = 0;
         int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
