@@ -15,7 +15,7 @@ public class RadioTest {
     @Test
     public void test2() {
         Radio radio = new Radio();
-        Assertions.assertEquals(9, radio.numberOfStations());
+        Assertions.assertEquals(10, radio.numberOfStations());
     }
 
     @Test
